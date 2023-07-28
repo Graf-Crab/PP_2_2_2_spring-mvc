@@ -1,6 +1,8 @@
 package web.service;
 
 
+
+
 import web.model.Car;
 
 import java.util.ArrayList;
@@ -8,7 +10,7 @@ import java.util.List;
 
 public class CarServiceImpl implements CarService {
 
-    public List<Car> cars;
+    private List<Car> cars;
 
     {
         cars = new ArrayList<>();
@@ -25,6 +27,10 @@ public class CarServiceImpl implements CarService {
             return cars;
         }
         return cars.subList(0, count);
+    }
+    @Override
+    public List<Car> getAllCars() {
+        return cars;
     }
 }
 
