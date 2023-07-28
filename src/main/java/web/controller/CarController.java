@@ -16,17 +16,15 @@ import java.util.List;
 public class CarController {
 
 
-
     @GetMapping(value = "/cars")
-    public String printWelcome(@RequestParam(value = "count",required = false) Integer count, ModelMap model) {
+    public String printWelcome(@RequestParam(value = "count", required = false) Integer count, ModelMap model) {
         List<Car> cars = new ArrayList<>();
-        cars.add(new Car("Tesla", "Blue","250"));
-        cars.add(new Car("Toyta", "Green","150"));
-        cars.add(new Car("BMW", "White","180"));
-        cars.add(new Car("Bugatti", "Blue","400"));
-        cars.add(new Car("Reno", "Red","330"));
-        model.addAttribute("cars", new CarServiceImpl().getCars(count,cars));
-        //model.addAttribute(cars);
+        cars.add(new Car("Tesla", "Blue", "250"));
+        cars.add(new Car("Toyta", "Green", "150"));
+        cars.add(new Car("BMW", "White", "180"));
+        cars.add(new Car("Bugatti", "Blue", "400"));
+        cars.add(new Car("Reno", "Red", "330"));
+        model.addAttribute("cars", new CarServiceImpl().getCars(count, cars));
         return "cars";
     }
 }
