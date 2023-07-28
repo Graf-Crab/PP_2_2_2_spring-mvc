@@ -1,7 +1,7 @@
 package web.service;
 
 
-import web.Model.Car;
+import web.model.Car;
 
 import java.util.ArrayList;
 import java.util.List;
