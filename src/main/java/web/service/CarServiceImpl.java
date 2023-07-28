@@ -3,9 +3,21 @@ package web.service;
 
 import web.Model.Car;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CarServiceImpl implements CarService {
+
+    public List<Car> cars;
+
+    {
+        cars = new ArrayList<>();
+        cars.add(new Car("Tesla", "Blue", "250"));
+        cars.add(new Car("Toyta", "Green", "150"));
+        cars.add(new Car("BMW", "White", "180"));
+        cars.add(new Car("Bugatti", "Blue", "400"));
+        cars.add(new Car("Reno", "Red", "330"));
+    }
 
     @Override
     public List<Car> getCars(Integer count, List<Car> cars) {
